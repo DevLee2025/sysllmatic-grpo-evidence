@@ -1,6 +1,4 @@
-# Andre: model and training infrastructure
-
-Updated October 5, 2026.
+# October 5, 2026 Project Status
 
 ## Deliverable status
 
