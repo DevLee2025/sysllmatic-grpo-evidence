@@ -1,0 +1,21 @@
+{
+  "task_id": "replace-with-pkb-task-id",
+  "benchmark": "ParallelKernelBench",
+  "language": "python",
+  "description": "Produce a correct, faster multi-GPU implementation of the supplied reference.",
+  "hardware": {
+    "accelerator": "replace-with-confirmed-gpu",
+    "interconnect": "replace-with-confirmed-interconnect",
+    "world_size": 2
+  },
+  "interface": {
+    "candidate_filename": "candidate.py",
+    "entrypoint": "replace-with-task-entrypoint"
+  },
+  "constraints": [
+    "Preserve the reference implementation's input and output contract.",
+    "Use only operations supported by the confirmed hardware and evaluator.",
+    "The evaluator will test correctness before accepting timing results."
+  ],
+  "reference_implementation": "# Replace this string with the complete PKB reference implementation.\n"
+}

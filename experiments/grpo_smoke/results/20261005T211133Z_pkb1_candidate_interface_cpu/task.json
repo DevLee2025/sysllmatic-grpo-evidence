@@ -1,0 +1,27 @@
+{
+  "task_id": "pkb-1-allreduce-provisional",
+  "benchmark": "ParallelKernelBench",
+  "language": "python",
+  "description": "Produce a correct, faster implementation of PKB problem 1, an all-reduce sum over one tensor.",
+  "origin": {
+    "repository": "togethercomputer/ParallelKernelBench_Problems",
+    "revision": "3ea6e263b29754fb639df0e25530c387f732fbcb",
+    "reference_path": "reference/1_allreduce.py"
+  },
+  "hardware": {
+    "accelerator": "NVIDIA H100 (provisional until Manas confirms Gautschi allocation)",
+    "interconnect": "NVLink/NVSwitch (provisional)",
+    "world_size": 8
+  },
+  "interface": {
+    "candidate_filename": "candidate.py",
+    "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor"
+  },
+  "constraints": [
+    "Preserve the solution function signature and all-rank sum semantics.",
+    "Assume the PKB default world size of 8 for this provisional generation test.",
+    "Return a new tensor and do not mutate the input tensor.",
+    "The evaluator will test correctness before accepting timing results."
+  ],
+  "reference_implementation": "import torch\nimport torch.distributed as dist\n\n\n@torch.no_grad()\ndef solution(tensor: torch.Tensor) -> torch.Tensor:\n    out = tensor.clone()\n    dist.all_reduce(out, op=dist.ReduceOp.SUM)\n    return out\n"
+}

@@ -1,0 +1,110 @@
+{
+  "attempt_id": "a5f3c96231e3041c",
+  "candidate": {
+    "extraction": {
+      "fence_count": 1,
+      "method": "first_fenced_block",
+      "warnings": []
+    },
+    "path": "candidate.py",
+    "raw_completion_path": "raw_completion.txt",
+    "raw_completion_sha256": "3a31ad911db4addbd8bec7ee97417956176846c1c33a4eafba51e4f01bd11619",
+    "sha256": "45c57a796706255764bd120f804263353e79c7d9c9d380204276d437efb7c701"
+  },
+  "created_at_utc": "2026-10-05T21:11:33.783409Z",
+  "environment": {
+    "cuda_runtime": null,
+    "gpu": null,
+    "hostname": "Gateway",
+    "peft": "0.21.2",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "torch": "2.7.1+cpu",
+    "transformers": "5.18.0"
+  },
+  "evaluation": {
+    "compilation": {
+      "elapsed_seconds": null,
+      "exit_code": null,
+      "log": null,
+      "status": "not_run"
+    },
+    "correctness": {
+      "details": null,
+      "passed": null,
+      "status": "not_run"
+    },
+    "execution": {
+      "elapsed_seconds": null,
+      "exit_code": null,
+      "log": null,
+      "status": "not_run"
+    },
+    "feedback": {
+      "source": null,
+      "status": "not_available",
+      "text": null
+    },
+    "timing": {
+      "candidate_seconds": null,
+      "reference_seconds": null,
+      "samples": null,
+      "speedup": null,
+      "status": "not_run"
+    }
+  },
+  "generation": {
+    "decoding_strategy": "greedy",
+    "device_policy": "auto",
+    "do_sample": false,
+    "elapsed_seconds": 9.983725932999999,
+    "input_tokens": 316,
+    "max_new_tokens": 2048,
+    "num_beams": 1,
+    "num_return_sequences": 1,
+    "output_tokens": 56,
+    "prompt_contract_sha256": "5d6d3cd8f42743cb07519b0ec1a57bef1b1814b0fa5d132d3abf14f4f97dbd17",
+    "rendered_prompt_path": "rendered_prompt.txt",
+    "rendered_prompt_sha256": "d972ebc234c6ca554d07782b5b0f526711dd8dd22808dcd7171e8aa1f31b3cc1",
+    "seed": 42,
+    "status": "completed",
+    "temperature": null,
+    "top_k": null,
+    "top_p": null
+  },
+  "model": {
+    "adapter_manifest_sha256": null,
+    "adapter_path": null,
+    "device": "cpu",
+    "dtype": "float32",
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "provider": "huggingface",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "snapshot_path": "/home/andre/code/sysllmatic-grpo-smoke/cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "schema_version": "sysllmatic.attempt.v1",
+  "task": {
+    "benchmark": "ParallelKernelBench",
+    "constraints": [
+      "Preserve the solution function signature and all-rank sum semantics.",
+      "Assume the PKB default world size of 8 for this provisional generation test.",
+      "Return a new tensor and do not mutate the input tensor.",
+      "The evaluator will test correctness before accepting timing results."
+    ],
+    "description": "Produce a correct, faster implementation of PKB problem 1, an all-reduce sum over one tensor.",
+    "hardware": {
+      "accelerator": "NVIDIA H100 (provisional until Manas confirms Gautschi allocation)",
+      "interconnect": "NVLink/NVSwitch (provisional)",
+      "world_size": 8
+    },
+    "id": "pkb-1-allreduce-provisional",
+    "input_path": "/home/andre/code/sysllmatic-grpo-smoke/interface-test/pkb_task1_contract.json",
+    "interface": {
+      "candidate_filename": "candidate.py",
+      "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor"
+    },
+    "language": "python",
+    "source_path": "task.json",
+    "source_sha256": "421bbd9e16032ae4dd43b81ae38ec9c4f192478c0226d6fd17d5743ffcef76f0"
+  }
+}

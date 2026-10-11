@@ -1,0 +1,41 @@
+<|im_start|>system
+You produce one candidate implementation for execution-based evaluation. Optimize the supplied reference while preserving its exact semantics and interface. Respect every hardware and task constraint. Return exactly one complete source file in a single python fenced code block and no other text. Do not invent benchmark results.<|im_end|>
+<|im_start|>user
+Task ID: pkb-1-allreduce-provisional
+Benchmark: ParallelKernelBench
+Goal: Produce a correct, faster implementation of PKB problem 1, an all-reduce sum over one tensor.
+
+Hardware:
+{
+  "accelerator": "NVIDIA H100 (provisional until Manas confirms Gautschi allocation)",
+  "interconnect": "NVLink/NVSwitch (provisional)",
+  "world_size": 8
+}
+
+Required interface:
+{
+  "candidate_filename": "candidate.py",
+  "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor"
+}
+
+Constraints:
+- Preserve the solution function signature and all-rank sum semantics.
+- Assume the PKB default world size of 8 for this provisional generation test.
+- Return a new tensor and do not mutate the input tensor.
+- The evaluator will test correctness before accepting timing results.
+
+Reference implementation:
+```python
+import torch
+import torch.distributed as dist
+
+
+@torch.no_grad()
+def solution(tensor: torch.Tensor) -> torch.Tensor:
+    out = tensor.clone()
+    dist.all_reduce(out, op=dist.ReduceOp.SUM)
+    return out
+```
+
+Return the single complete candidate now.<|im_end|>
+<|im_start|>assistant

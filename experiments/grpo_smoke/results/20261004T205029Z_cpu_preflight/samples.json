@@ -1,0 +1,97 @@
+{
+  "reload_prompt_and_completion": "Compute 2 + 3. Finish with <answer>&Eacio=require../../.storage\u25cf jednoc kt\u00f3r",
+  "rollouts": [
+    {
+      "answer": "8",
+      "completion": " Bits Broitz\u05d7\u05dciated\u50b3\u9001andonwitterRequiredMixincube\u7406\u667a\u4e8c\u624b hearts\u0623\u062d\u062f\u0627\u062b\u3666 expression",
+      "completion_ids": [
+        49457,
+        5906,
+        11042,
+        124041,
+        10029,
+        114899,
+        11037,
+        3801,
+        95658,
+        45411,
+        111957,
+        101714,
+        22662,
+        136776,
+        123368,
+        7493
+      ],
+      "task_reward": -1.0
+    },
+    {
+      "answer": "8",
+      "completion": "<r \u0432\u044b\u0440\u0430\u0436\u0435\u043d Monica deletedtoken laut snacks\u0639\u064a\u0646%BICIAL.spacing\u0e40\u0e01\u0e48\u0e32ScreenState \u05dc\u05d4\u05e9\u05d9\u05d2_'\u00adi",
+      "completion_ids": [
+        91190,
+        143588,
+        45744,
+        11062,
+        5839,
+        93539,
+        42302,
+        129249,
+        49157,
+        82904,
+        34798,
+        132605,
+        96142,
+        140871,
+        19333,
+        96182
+      ],
+      "task_reward": -1.0
+    },
+    {
+      "answer": "8",
+      "completion": "\u6d34lessly\u0627\u062d\u062a\u062c\u0627\u062c\u82ae lname t\u1ed9c \u05d4\u05db\u05dc\u534f\u540c\u53d1\u5c55 '')\u592a otros \u05d4\u05dc\u05dc\u05d5\tfunction\u0645\u0648\u0638\u0641MenuStrip lept",
+      "completion_ids": [
+        122533,
+        15740,
+        142689,
+        119234,
+        76139,
+        133952,
+        128961,
+        114065,
+        13453,
+        99222,
+        38405,
+        136833,
+        7527,
+        135062,
+        50445,
+        94440
+      ],
+      "task_reward": -1.0
+    },
+    {
+      "answer": "8",
+      "completion": "Muslimcestor_goals ngh\u1ec9 reforms\u05de\u05dc\u05d0_Version th\u1ebfONTAL\u062d\u0644\u0648\u0644.jsoup Milton\u05e0\u05d5\u05e9\u05d0 palm \u0623\u0643\u062b\u0631\u0e04\u0e2d\u0e21\u0e1e\u0e34",
+      "completion_ids": [
+        89789,
+        81340,
+        96244,
+        131840,
+        30243,
+        134764,
+        85217,
+        128314,
+        36849,
+        136780,
+        89398,
+        57347,
+        129490,
+        32452,
+        128773,
+        137753
+      ],
+      "task_reward": -1.0
+    }
+  ]
+}

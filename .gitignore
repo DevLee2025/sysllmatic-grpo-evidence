@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+envs/
+cache/
+runs/
+trainer_output/
+final_adapter/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.out

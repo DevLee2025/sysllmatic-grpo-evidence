@@ -1,0 +1,50 @@
+{
+  "log_history": [
+    {
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "completions/clipped_ratio": 1.0,
+      "completions/max_length": 16.0,
+      "completions/max_terminated_length": 0.0,
+      "completions/mean_length": 16.0,
+      "completions/mean_terminated_length": 0.0,
+      "completions/min_length": 16.0,
+      "completions/min_terminated_length": 0.0,
+      "entropy": 11.932002067565918,
+      "epoch": 0.125,
+      "frac_reward_zero_std": 0.0,
+      "grad_norm": 0.00907393079251051,
+      "learning_rate": 0.1,
+      "loss": 0.0,
+      "num_tokens": 132.0,
+      "reward": -1.0,
+      "reward_std": 0.8606629967689514,
+      "rewards/arithmetic_reward/mean": -1.0,
+      "rewards/arithmetic_reward/std": 0.0,
+      "rewards/probe_reward/mean": 0.0,
+      "rewards/probe_reward/std": 0.8606629967689514,
+      "step": 1,
+      "step_time": 0.7597908650000136
+    },
+    {
+      "epoch": 0.125,
+      "step": 1,
+      "total_flos": 0.0,
+      "train_loss": 0.0,
+      "train_runtime": 1.3727,
+      "train_samples_per_second": 2.914,
+      "train_steps_per_second": 0.728
+    }
+  ],
+  "train": {
+    "epoch": 0.125,
+    "total_flos": 0.0,
+    "train_loss": 0.0,
+    "train_runtime": 1.3727,
+    "train_samples_per_second": 2.914,
+    "train_steps_per_second": 0.728
+  }
+}
