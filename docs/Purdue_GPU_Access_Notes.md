@@ -127,22 +127,3 @@ Resolve an existing alias without displaying private keys:
 ```powershell
 ssh -G <alias> | Select-String '^(hostname|user) '
 ```
-
-Do not place passwords, private keys, MFA codes, or tokens in this repository
-or in chat.
-
-## Information needed before Codex submits the job
-
-Provide or authorize read-only discovery of:
-
-- selected system: Scholar or Anvil;
-- username and canonical hostname or SSH alias;
-- Slurm account/allocation;
-- eligible GPU partition and QOS, if the system uses one;
-- scratch path; and
-- confirmation that SSH plus MFA/key authentication works in your terminal.
-
-For the later eight-rank ParallelKernelBench study, revisit the hardware choice.
-Anvil documents four GPUs per node and Spark one. Purdue Gautschi has eight-H100
-nodes, but it requires a separate purchased or sponsored allocation. See the
-[Gautschi overview](https://docs.rcac.purdue.edu/userguides/gautschi/overview/).
