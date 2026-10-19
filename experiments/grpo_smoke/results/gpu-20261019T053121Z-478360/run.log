@@ -1,0 +1,64 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  20%|██        | 2/10 [00:00<00:00, 17.45it/s]Fetching 10 files:  90%|█████████ | 9/10 [00:00<00:00, 45.76it/s]Fetching 10 files: 100%|██████████| 10/10 [00:03<00:00,  3.23it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 3087.88it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:05<00:22,  5.70s/it]                                             {'loss': '-1.49e-08', 'grad_norm': '1.484', 'learning_rate': '5e-05', 'num_tokens': '450', 'completions/mean_length': '60.5', 'completions/min_length': '50', 'completions/max_length': '64', 'completions/clipped_ratio': '0.75', 'completions/mean_terminated_length': '50', 'completions/min_terminated_length': '50', 'completions/max_terminated_length': '50', 'rewards/arithmetic_reward/mean': '0.2805', 'rewards/arithmetic_reward/std': '0.5609', 'reward': '0.2805', 'reward_std': '0.5609', 'frac_reward_zero_std': '0', 'entropy': '0.843', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.587', 'epoch': '0.0625'}
+ 20%|██        | 1/5 [00:05<00:22,  5.70s/it] 40%|████      | 2/5 [00:08<00:11,  3.95s/it]                                             {'loss': '0', 'grad_norm': '0', 'learning_rate': '4e-05', 'num_tokens': '884', 'completions/mean_length': '55.5', 'completions/min_length': '30', 'completions/max_length': '64', 'completions/clipped_ratio': '0.75', 'completions/mean_terminated_length': '30', 'completions/min_terminated_length': '30', 'completions/max_terminated_length': '30', 'rewards/arithmetic_reward/mean': '0', 'rewards/arithmetic_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.9426', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '2.715', 'epoch': '0.125'}
+ 40%|████      | 2/5 [00:08<00:11,  3.95s/it] 60%|██████    | 3/5 [00:10<00:06,  3.24s/it]                                             {'loss': '0', 'grad_norm': '0', 'learning_rate': '3e-05', 'num_tokens': '1267', 'completions/mean_length': '43.75', 'completions/min_length': '13', 'completions/max_length': '64', 'completions/clipped_ratio': '0.5', 'completions/mean_terminated_length': '23.5', 'completions/min_terminated_length': '13', 'completions/max_terminated_length': '34', 'rewards/arithmetic_reward/mean': '0', 'rewards/arithmetic_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.7393', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '2.394', 'epoch': '0.1875'}
+ 60%|██████    | 3/5 [00:10<00:06,  3.24s/it] 80%|████████  | 4/5 [00:13<00:02,  2.92s/it]                                             {'loss': '0', 'grad_norm': '0', 'learning_rate': '2e-05', 'num_tokens': '1693', 'completions/mean_length': '57.5', 'completions/min_length': '38', 'completions/max_length': '64', 'completions/clipped_ratio': '0.75', 'completions/mean_terminated_length': '38', 'completions/min_terminated_length': '38', 'completions/max_terminated_length': '38', 'rewards/arithmetic_reward/mean': '0', 'rewards/arithmetic_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.845', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '2.42', 'epoch': '0.25'}
+ 80%|████████  | 4/5 [00:13<00:02,  2.92s/it]100%|██████████| 5/5 [00:15<00:00,  2.74s/it]                                             {'loss': '0', 'grad_norm': '0', 'learning_rate': '1e-05', 'num_tokens': '2133', 'completions/mean_length': '53', 'completions/min_length': '20', 'completions/max_length': '64', 'completions/clipped_ratio': '0.75', 'completions/mean_terminated_length': '20', 'completions/min_terminated_length': '20', 'completions/max_terminated_length': '20', 'rewards/arithmetic_reward/mean': '0', 'rewards/arithmetic_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.3834', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '2.413', 'epoch': '0.3125'}
+100%|██████████| 5/5 [00:15<00:00,  2.74s/it]                                             {'train_runtime': '15.91', 'train_samples_per_second': '1.257', 'train_steps_per_second': '0.314', 'train_loss': '-2.98e-09', 'epoch': '0.3125'}
+100%|██████████| 5/5 [00:15<00:00,  2.74s/it]100%|██████████| 5/5 [00:15<00:00,  3.18s/it]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 64/290 [00:00<00:00, 617.10it/s]Loading weights:  72%|███████▏  | 209/290 [00:00<00:00, 1093.87it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1118.06it/s]
+{
+  "adapter_changed": true,
+  "changed_trainable_tensors": 96,
+  "checkpoint_paths": [
+    "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5"
+  ],
+  "checkpoint_written": true,
+  "completed_steps": 5,
+  "correct_rollouts": 1,
+  "cuda_runtime": "12.8",
+  "device": "NVIDIA A40",
+  "device_total_memory_bytes": 47697690624,
+  "final_trainable_sha256": "9d44ffc02b1fa49d878fa7be3d169cb0c4c13e73c7f4c65c38825c8b121f07ec",
+  "finite_training_loss": true,
+  "format_valid_rollouts": 1,
+  "group_variation_observed": true,
+  "initial_trainable_sha256": "131977f28f0765e005ee9a823112c1f587242bb7b8254da6314d39c3860eee98",
+  "max_memory_allocated_bytes": 2027739136,
+  "max_memory_reserved_bytes": 2048917504,
+  "max_steps": 5,
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "model_snapshot_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+  "passed": true,
+  "platform": "Linux-5.14.0-687.34.1.el9_8.x86_64-x86_64-with-glibc2.34",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:20:25) [GCC 14.3.0]",
+  "python_elapsed_seconds": 22.359512340743095,
+  "reload_checkpoint_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5",
+  "reload_generated": true,
+  "reload_peak_memory_allocated_bytes": 2027739136,
+  "reload_peak_memory_reserved_bytes": 2048917504,
+  "resolved_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "rollout_count": 20,
+  "slurm": {
+    "job_id": "478360",
+    "job_name": "grpo-smoke",
+    "node_list": "scholar-j000",
+    "partition": "gpu"
+  },
+  "training_elapsed_seconds": 16.15700549306348,
+  "training_loss": -2.9802322387695314e-09,
+  "training_peak_memory_allocated_bytes": 1365021184,
+  "training_peak_memory_reserved_bytes": 1692401664,
+  "versions": {
+    "accelerate": "1.15.0",
+    "datasets": "5.0.1",
+    "peft": "0.21.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.18.0",
+    "trl": "1.14.1"
+  }
+}
+GPU GRPO smoke test passed.

@@ -1,0 +1,52 @@
+{
+  "adapter_changed": true,
+  "changed_trainable_tensors": 96,
+  "checkpoint_paths": [
+    "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5"
+  ],
+  "checkpoint_written": true,
+  "completed_steps": 5,
+  "correct_rollouts": 1,
+  "cuda_runtime": "12.8",
+  "device": "NVIDIA A40",
+  "device_total_memory_bytes": 47697690624,
+  "final_trainable_sha256": "9d44ffc02b1fa49d878fa7be3d169cb0c4c13e73c7f4c65c38825c8b121f07ec",
+  "finite_training_loss": true,
+  "format_valid_rollouts": 1,
+  "group_variation_observed": true,
+  "initial_trainable_sha256": "131977f28f0765e005ee9a823112c1f587242bb7b8254da6314d39c3860eee98",
+  "max_memory_allocated_bytes": 2027739136,
+  "max_memory_reserved_bytes": 2048917504,
+  "max_steps": 5,
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "model_snapshot_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+  "passed": true,
+  "platform": "Linux-5.14.0-687.34.1.el9_8.x86_64-x86_64-with-glibc2.34",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:20:25) [GCC 14.3.0]",
+  "python_elapsed_seconds": 22.359512340743095,
+  "reload_checkpoint_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5",
+  "reload_generated": true,
+  "reload_peak_memory_allocated_bytes": 2027739136,
+  "reload_peak_memory_reserved_bytes": 2048917504,
+  "resolved_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "rollout_count": 20,
+  "slurm": {
+    "job_id": "478360",
+    "job_name": "grpo-smoke",
+    "node_list": "scholar-j000",
+    "partition": "gpu"
+  },
+  "training_elapsed_seconds": 16.15700549306348,
+  "training_loss": -2.9802322387695314e-09,
+  "training_peak_memory_allocated_bytes": 1365021184,
+  "training_peak_memory_reserved_bytes": 1692401664,
+  "versions": {
+    "accelerate": "1.15.0",
+    "datasets": "5.0.1",
+    "peft": "0.21.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.18.0",
+    "trl": "1.14.1"
+  }
+}

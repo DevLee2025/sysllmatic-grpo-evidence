@@ -1,8 +1,8 @@
 # SysLLMatic GRPO evidence
 
-This repository is a public evidence snapshot for Andre Lee's Fall 2026 work in Purdue University's Vertically Integrated Projects Pre-trained Models team. It documents a small GRPO training-infrastructure pilot, a fixed candidate-generation interface, and the prepared Purdue Scholar GPU follow-up.
+This repository is a public evidence snapshot for Andre Lee's Fall 2026 work in Purdue University's Vertically Integrated Projects Pre-trained Models team. It documents a small GRPO training-infrastructure pilot, a fixed candidate-generation interface, and the completed Purdue Scholar A40 follow-up.
 
-The completed result is intentionally narrow: the CPU pilot verifies that generation, grouped rewards, backpropagation, a LoRA update, checkpoint save/reload, and post-reload generation work together. It does not show that GRPO improves code correctness or speed. The archived candidate demonstrates the model-to-evaluator handoff format and has not been evaluated as an optimization.
+The completed result is intentionally narrow: the CPU pilot verifies the basic path, and the A40 run verifies five optimizer steps with a pinned Qwen checkpoint and real arithmetic reward. Neither shows that GRPO improves code correctness or speed. The archived candidate demonstrates the model-to-evaluator handoff format and has not been evaluated as an optimization.
 
 ## Evidence map
 
@@ -11,10 +11,10 @@ The completed result is intentionally narrow: the CPU pilot verifies that genera
 | The one-step CPU GRPO path completed and changed a trainable LoRA tensor | [`REPORT.md`](experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/REPORT.md), [`metrics.json`](experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/metrics.json), and [`run.log`](experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/run.log) |
 | The saved checkpoint was hashed and reloaded | [`checkpoint_manifest.sha256`](experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/checkpoint_manifest.sha256) and [`summary.json`](experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/summary.json) |
 | The candidate generator records fixed settings and a shared attempt schema | [`generate_candidate.py`](experiments/grpo_smoke/generate_candidate.py), [`attempt_record.schema.json`](experiments/grpo_smoke/attempt_record.schema.json), and the [archived attempt](experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/attempt.json) |
-| The five-step Qwen GPU check is prepared but has not been reported as completed | [`run_scholar_gpu.sh`](experiments/grpo_smoke/run_scholar_gpu.sh), [`gpu_smoke.py`](experiments/grpo_smoke/gpu_smoke.py), and [`scholar_gpu.sub`](experiments/grpo_smoke/scholar_gpu.sub) |
-| The October 9 status and limitations are documented | [Professor Davis update](docs/Professor_Davis_Andre_Update_2026-10-09.md) and [model and training infrastructure report](docs/Andre_Model_and_Training_Infrastructure.md) |
+| The five-step Qwen GPU path completed on a Scholar A40 | [concise report](docs/assets/Andre_A40_GRPO_Report_2026-10-19.md), [run report](experiments/grpo_smoke/results/gpu-20261019T053121Z-478360/REPORT.md), and [machine-readable summary](experiments/grpo_smoke/results/gpu-20261019T053121Z-478360/summary.json) |
+| The earlier model-interface status and limitations are documented | [October 5 status](docs/assets/5Oct2026_Status.md) and [Manas evaluator handoff](docs/assets/Manas_Evaluator_Handoff.md) |
 
-For the first evaluator integration, use the [Manas evaluator handoff](docs/Manas_Evaluator_Handoff.md). It links the exact task, candidate, run artifacts, and Scholar scripts and defines the correctness gate required before timing.
+For the first evaluator integration, use the [Manas evaluator handoff](docs/assets/Manas_Evaluator_Handoff.md). It links the exact task, candidate, run artifacts, and Scholar scripts and defines the correctness gate required before timing.
 
 The complete operating instructions and pass criteria are in [`experiments/grpo_smoke/README.md`](experiments/grpo_smoke/README.md).
 

@@ -1,0 +1,5 @@
+JobID             State    Elapsed  AllocTRES     MaxRSS ExitCode 
+------------ ---------- ---------- ---------- ---------- -------- 
+478360        COMPLETED   00:03:56 billing=4+                 0:0 
+478360.batch  COMPLETED   00:03:56 cpu=4,gre+   1899452K      0:0 
+478360.exte+  COMPLETED   00:03:56 billing=4+                 0:0 

@@ -4,11 +4,11 @@ This page identifies the exact artifacts for the first model-to-evaluator integr
 
 ## Direct artifacts
 
-- [CPU pilot code](../experiments/grpo_smoke/cpu_preflight.py) and [local runner](../experiments/grpo_smoke/run_cpu_preflight.sh)
-- [CPU pilot report](../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/REPORT.md), [metrics](../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/metrics.json), and [complete audit-sized output](../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/)
-- [Scholar interactive runner](../experiments/grpo_smoke/run_scholar_gpu.sh) and [Slurm batch job](../experiments/grpo_smoke/scholar_gpu.sub)
-- [Provisional PKB problem 1 task contract](../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/task.json)
-- [Generated candidate](../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/candidate.py), [attempt record](../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/attempt.json), and [generation report](../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/REPORT.md)
+- [CPU pilot code](../../experiments/grpo_smoke/cpu_preflight.py) and [local runner](../../experiments/grpo_smoke/run_cpu_preflight.sh)
+- [CPU pilot report](../../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/REPORT.md), [metrics](../../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/metrics.json), and [complete audit-sized output](../../experiments/grpo_smoke/results/20261004T205029Z_cpu_preflight/)
+- [Scholar interactive runner](../../experiments/grpo_smoke/run_scholar_gpu.sh) and [Slurm batch job](../../experiments/grpo_smoke/scholar_gpu.sub)
+- [Provisional PKB problem 1 task contract](../../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/task.json)
+- [Generated candidate](../../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/candidate.py), [attempt record](../../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/attempt.json), and [generation report](../../experiments/grpo_smoke/results/20261005T211133Z_pkb1_candidate_interface_cpu/REPORT.md)
 
 The expected SHA-256 for `candidate.py` is:
 
@@ -24,7 +24,7 @@ The candidate clones the input and calls `torch.distributed.all_reduce` with `SU
 
 ```bash
 cd "$RCAC_SCRATCH"
-git clone --branch evidence-2026-10-09 --single-branch \
+git clone --branch main --single-branch \
   https://github.com/DevLee2025/sysllmatic-grpo-evidence.git
 cd sysllmatic-grpo-evidence/experiments/grpo_smoke
 
