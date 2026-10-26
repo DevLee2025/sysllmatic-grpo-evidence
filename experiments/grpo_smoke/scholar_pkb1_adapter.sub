@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=pkb1-adapter
+#SBATCH --account=scholar
+#SBATCH --partition=gpu
+#SBATCH --constraint=a40
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:30:00
+#SBATCH --output=pkb1-adapter-%j.out
+
+set -euo pipefail
+
+readonly SUBMIT_DIR="${SLURM_SUBMIT_DIR:?submit this job from the grpo_smoke directory}"
+readonly TASK_PATH="${SUBMIT_DIR}/pkb1_allreduce_scholar_a40_task.json"
+readonly DEFAULT_ADAPTER_PATH="${RCAC_SCRATCH}/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5"
+readonly ADAPTER_PATH="${GRPO_ADAPTER_PATH:-${DEFAULT_ADAPTER_PATH}}"
+readonly OUTPUT_DIR="${CANDIDATE_OUTPUT_DIR:-${RCAC_SCRATCH}/sysllmatic-grpo-smoke/candidates/pkb1-adapter-${SLURM_JOB_ID}}"
+
+test -f "${TASK_PATH}"
+test -d "${ADAPTER_PATH}"
+
+nvidia-smi --query-gpu=name,memory.total,uuid --format=csv,noheader
+
+bash "${SUBMIT_DIR}/run_scholar_candidate.sh" \
+  --task "${TASK_PATH}" \
+  --adapter-path "${ADAPTER_PATH}" \
+  --output-dir "${OUTPUT_DIR}"
+
+sha256sum \
+  "${OUTPUT_DIR}/1_allreduce_cuda.py" \
+  "${OUTPUT_DIR}/attempt.json" \
+  "${OUTPUT_DIR}/task.json" \
+  "${OUTPUT_DIR}/rendered_prompt.txt" \
+  "${OUTPUT_DIR}/raw_completion.txt" \
+  > "${OUTPUT_DIR}/generation_manifest.sha256"
+
+printf 'Candidate package: %s\n' "${OUTPUT_DIR}"
+cat "${OUTPUT_DIR}/generation_manifest.sha256"

@@ -182,3 +182,21 @@ A complete CPU interface check is archived under
 candidate for a provisional, revision-pinned PKB problem 1 contract and wrote a
 valid attempt record. The candidate uses the same algorithm as the reference;
 the archive proves the handoff format, not correctness testing or optimization.
+
+### Confirmed PKB problem 1 adapter handoff
+
+The first evaluator integration uses PKB revision
+`3cc0f9b435010b4957ccf7b4b85791480c7c69a6`, backend `cuda`, and two Scholar
+A40 ranks. The confirmed task contract is
+`pkb1_allreduce_scholar_a40_task.json`; it requests the exact evaluator filename
+`1_allreduce_cuda.py`. Generate the fixed checkpoint-5 candidate in a batch job:
+
+```bash
+JOB_ID=$(sbatch --parsable scholar_pkb1_adapter.sub)
+echo "$JOB_ID"
+```
+
+The output directory contains the unchanged candidate, its `attempt.json`, the
+exact task and prompt, raw completion, and `generation_manifest.sha256`. Manas's
+evaluator can copy that directory as `solutions_andre_adapter` and run its
+correctness-first command without renaming the candidate.

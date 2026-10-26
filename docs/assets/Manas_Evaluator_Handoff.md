@@ -51,4 +51,29 @@ The earlier blocker was the lack of a reusable authenticated cluster session for
 5. Record compilation/import, execution, and correctness status, plus worker logs and timeout cleanup, in a copy of `attempt.json`.
 6. Only after all correctness cases pass, run the reference and candidate timing paths with identical warmup, synchronization, and measured iterations. Do not report a speedup for an incorrect or incomplete result.
 
-The archived task contract assumes eight H100 ranks and labels that hardware provisional. If the available evaluator uses a different world size or accelerator, record the actual configuration and create a new evaluated attempt record instead of silently changing the archived generation metadata.
+## Confirmed first integration
+
+Manas selected PKB problem `1_allreduce` at evaluator revision
+`3cc0f9b435010b4957ccf7b4b85791480c7c69a6`, backend `cuda`, on two Scholar
+A40 ranks. The replacement task contract is
+[`pkb1_allreduce_scholar_a40_task.json`](../../experiments/grpo_smoke/pkb1_allreduce_scholar_a40_task.json).
+It generates the exact filename expected by PKB, `1_allreduce_cuda.py`.
+
+After receiving the checkpoint-5 candidate package, evaluate it with:
+
+```bash
+uv run python run_local.py \
+  --nproc-per-node 2 \
+  --mode eval \
+  --problem 1 \
+  --solution cuda \
+  --solutions-dir "$(pwd)/solutions_andre_adapter" \
+  --dtype bfloat16 \
+  --trials 5 \
+  --atol 1e-2 \
+  --rtol 1e-2 \
+  --download
+```
+
+This command tests correctness only. Add performance measurement only after all
+five trials pass, while preserving the same evaluator revision and hardware.
