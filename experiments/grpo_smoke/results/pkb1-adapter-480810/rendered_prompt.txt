@@ -1,0 +1,46 @@
+<|im_start|>system
+You produce one candidate implementation for execution-based evaluation. Optimize the supplied reference while preserving its exact semantics and interface. Respect every hardware and task constraint. Return exactly one complete source file in a single python fenced code block and no other text. Do not invent benchmark results.<|im_end|>
+<|im_start|>user
+Task ID: pkb-1-allreduce-scholar-a40x2
+Benchmark: ParallelKernelBench
+Goal: Produce a correct, faster CUDA-backend implementation of PKB problem 1, an all-reduce sum over one tensor.
+
+Hardware:
+{
+  "accelerator": "NVIDIA A40",
+  "allocation": "Purdue Scholar gpu partition",
+  "interconnect": "Do not assume a topology; the evaluator will record nvidia-smi topo -m.",
+  "world_size": 2
+}
+
+Required interface:
+{
+  "candidate_filename": "1_allreduce_cuda.py",
+  "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor",
+  "pkb_backend": "cuda"
+}
+
+Constraints:
+- Preserve the solution function signature and all-rank sum semantics.
+- Target exactly two NVIDIA A40 ranks for this Scholar plumbing run.
+- Return a new tensor and do not mutate the input tensor.
+- Produce one complete Python module at the filename 1_allreduce_cuda.py for the PKB cuda backend.
+- Use only dependencies and operations available in the pinned ParallelKernelBench evaluator.
+- The evaluator will run five bfloat16 correctness trials at atol=1e-2 and rtol=1e-2 before any timing result is accepted.
+- Do not claim correctness or performance in the candidate source.
+
+Reference implementation:
+```python
+import torch
+import torch.distributed as dist
+
+
+@torch.no_grad()
+def solution(tensor: torch.Tensor) -> torch.Tensor:
+    out = tensor.clone()
+    dist.all_reduce(out, op=dist.ReduceOp.SUM)
+    return out
+```
+
+Return the single complete candidate now.<|im_end|>
+<|im_start|>assistant

@@ -77,3 +77,11 @@ uv run python run_local.py \
 
 This command tests correctness only. Add performance measurement only after all
 five trials pass, while preserving the same evaluator revision and hardware.
+
+The generated adapter package is
+[`results/pkb1-adapter-480810/`](../../experiments/grpo_smoke/results/pkb1-adapter-480810/).
+Use attempt ID `69d2f9e944314603` and verify candidate SHA-256
+`45c57a796706255764bd120f804263353e79c7d9c9d380204276d437efb7c701`
+before execution. The package already contains the required filename
+`1_allreduce_cuda.py`; point `--solutions-dir` directly at the package directory
+or copy the complete directory to `solutions_andre_adapter`.

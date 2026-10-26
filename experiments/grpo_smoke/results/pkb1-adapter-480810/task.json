@@ -1,0 +1,40 @@
+{
+  "task_id": "pkb-1-allreduce-scholar-a40x2",
+  "benchmark": "ParallelKernelBench",
+  "language": "python",
+  "description": "Produce a correct, faster CUDA-backend implementation of PKB problem 1, an all-reduce sum over one tensor.",
+  "origin": {
+    "repository": "togethercomputer/ParallelKernelBench",
+    "revision": "3cc0f9b435010b4957ccf7b4b85791480c7c69a6",
+    "reference_path": "reference/1_allreduce.py",
+    "backend": "cuda"
+  },
+  "hardware": {
+    "accelerator": "NVIDIA A40",
+    "world_size": 2,
+    "allocation": "Purdue Scholar gpu partition",
+    "interconnect": "Do not assume a topology; the evaluator will record nvidia-smi topo -m."
+  },
+  "interface": {
+    "candidate_filename": "1_allreduce_cuda.py",
+    "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor",
+    "pkb_backend": "cuda"
+  },
+  "evaluation": {
+    "dtype": "bfloat16",
+    "trials": 5,
+    "atol": 0.01,
+    "rtol": 0.01,
+    "correctness_before_timing": true
+  },
+  "constraints": [
+    "Preserve the solution function signature and all-rank sum semantics.",
+    "Target exactly two NVIDIA A40 ranks for this Scholar plumbing run.",
+    "Return a new tensor and do not mutate the input tensor.",
+    "Produce one complete Python module at the filename 1_allreduce_cuda.py for the PKB cuda backend.",
+    "Use only dependencies and operations available in the pinned ParallelKernelBench evaluator.",
+    "The evaluator will run five bfloat16 correctness trials at atol=1e-2 and rtol=1e-2 before any timing result is accepted.",
+    "Do not claim correctness or performance in the candidate source."
+  ],
+  "reference_implementation": "import torch\nimport torch.distributed as dist\n\n\n@torch.no_grad()\ndef solution(tensor: torch.Tensor) -> torch.Tensor:\n    out = tensor.clone()\n    dist.all_reduce(out, op=dist.ReduceOp.SUM)\n    return out\n"
+}

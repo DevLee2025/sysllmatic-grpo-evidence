@@ -1,0 +1,147 @@
+Mon Oct 26 10:45:00 AM EDT 2026
+             JOBID PARTITION           NAME    STATE       TIME NODELIST(REASON)
+            480810       gpu   pkb1-adapter  RUNNING       0:59 scholar-j001
+Mon Oct 26 10:45:20 AM EDT 2026
+             JOBID PARTITION           NAME    STATE       TIME NODELIST(REASON)
+            480810       gpu   pkb1-adapter  RUNNING       1:19 scholar-j001
+JobID             State    Elapsed  AllocTRES     MaxRSS ExitCode
+------------ ---------- ---------- ---------- ---------- --------
+480810        COMPLETED   00:01:32 billing=4+                 0:0
+480810.batch  COMPLETED   00:01:32 cpu=4,gre+    608420K      0:0
+480810.exte+  COMPLETED   00:01:32 billing=4+                 0:0
+OUTPUT_DIR=/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810
+NVIDIA A40, 46068 MiB, GPU-6f8db8f6-2442-a7b3-658f-6ad736132d89
+Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 51.51it/s]
+Loading weights: 100%|██████████| 290/290 [00:02<00:00, 104.38it/s]
+{
+  "attempt_id": "69d2f9e944314603",
+  "candidate": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/1_allreduce_cuda.py",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "record": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/attempt.json"
+}
+Candidate package: /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810
+45c57a796706255764bd120f804263353e79c7d9c9d380204276d437efb7c701  /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/1_allreduce_cuda.py
+400dea9956349b6061a895e2117c12b21c7fd5dd833ff64f32ba400f34beb049  /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/attempt.json
+48b4ae4152456e64179d54106c1a0f7e7068e78407aef37012739448acbc3821  /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/task.json
+dd7c73f53fe93be4a311304e9bbc86ac0d4798bf1ec4b7f6e4805f3b453848de  /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/rendered_prompt.txt
+3a31ad911db4addbd8bec7ee97417956176846c1c33a4eafba51e4f01bd11619  /scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/raw_completion.txt
+/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/1_allreduce_cuda.py: OK
+/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/attempt.json: OK
+/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/task.json: OK
+/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/rendered_prompt.txt: OK
+/scratch/scholar/lee5897/sysllmatic-grpo-smoke/candidates/pkb1-adapter-480810/raw_completion.txt: OK
+{
+  "attempt_id": "69d2f9e944314603",
+  "candidate": {
+    "extraction": {
+      "fence_count": 1,
+      "method": "first_fenced_block",
+      "warnings": []
+    },
+    "path": "1_allreduce_cuda.py",
+    "raw_completion_path": "raw_completion.txt",
+    "raw_completion_sha256": "3a31ad911db4addbd8bec7ee97417956176846c1c33a4eafba51e4f01bd11619",
+    "sha256": "45c57a796706255764bd120f804263353e79c7d9c9d380204276d437efb7c701"
+  },
+  "created_at_utc": "2026-10-26T14:45:19.929136Z",
+  "environment": {
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA A40",
+    "hostname": "scholar-j001.rcac.purdue.edu",
+    "peft": "0.21.2",
+    "platform": "Linux-5.14.0-687.34.1.el9_8.x86_64-x86_64-with-glibc2.34",
+    "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:20:25) [GCC 14.3.0]",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.18.0"
+  },
+  "evaluation": {
+    "compilation": {
+      "elapsed_seconds": null,
+      "exit_code": null,
+      "log": null,
+      "status": "not_run"
+    },
+    "correctness": {
+      "details": null,
+      "passed": null,
+      "status": "not_run"
+    },
+    "execution": {
+      "elapsed_seconds": null,
+      "exit_code": null,
+      "log": null,
+      "status": "not_run"
+    },
+    "feedback": {
+      "source": null,
+      "status": "not_available",
+      "text": null
+    },
+    "timing": {
+      "candidate_seconds": null,
+      "reference_seconds": null,
+      "samples": null,
+      "speedup": null,
+      "status": "not_run"
+    }
+  },
+  "generation": {
+    "decoding_strategy": "greedy",
+    "device_policy": "cuda_required",
+    "do_sample": false,
+    "elapsed_seconds": 9.231348665023688,
+    "input_tokens": 413,
+    "max_new_tokens": 2048,
+    "num_beams": 1,
+    "num_return_sequences": 1,
+    "output_tokens": 56,
+    "prompt_contract_sha256": "159f9c69d3799b833bdaec3dfe98c448ff794185a3f9b76552f0a035e672df0a",
+    "rendered_prompt_path": "rendered_prompt.txt",
+    "rendered_prompt_sha256": "dd7c73f53fe93be4a311304e9bbc86ac0d4798bf1ec4b7f6e4805f3b453848de",
+    "seed": 42,
+    "status": "completed",
+    "temperature": null,
+    "top_k": null,
+    "top_p": null
+  },
+  "model": {
+    "adapter_manifest_sha256": "0737a0b68b878eb0d271b3d0ae29efd5d0dedc6402979fb145be18f180ed8399",
+    "adapter_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/runs/gpu-20261019T053121Z-478360/trainer_output/checkpoint-5",
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "provider": "huggingface",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "snapshot_path": "/scratch/scholar/lee5897/sysllmatic-grpo-smoke/cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "schema_version": "sysllmatic.attempt.v1",
+  "task": {
+    "benchmark": "ParallelKernelBench",
+    "constraints": [
+      "Preserve the solution function signature and all-rank sum semantics.",
+      "Target exactly two NVIDIA A40 ranks for this Scholar plumbing run.",
+      "Return a new tensor and do not mutate the input tensor.",
+      "Produce one complete Python module at the filename 1_allreduce_cuda.py for the PKB cuda backend.",
+      "Use only dependencies and operations available in the pinned ParallelKernelBench evaluator.",
+      "The evaluator will run five bfloat16 correctness trials at atol=1e-2 and rtol=1e-2 before any timing result is accepted.",
+      "Do not claim correctness or performance in the candidate source."
+    ],
+    "description": "Produce a correct, faster CUDA-backend implementation of PKB problem 1, an all-reduce sum over one tensor.",
+    "hardware": {
+      "accelerator": "NVIDIA A40",
+      "allocation": "Purdue Scholar gpu partition",
+      "interconnect": "Do not assume a topology; the evaluator will record nvidia-smi topo -m.",
+      "world_size": 2
+    },
+    "id": "pkb-1-allreduce-scholar-a40x2",
+    "input_path": "/scratch/scholar/lee5897/sysllmatic-grpo-evidence-candidate/experiments/grpo_smoke/pkb1_allreduce_scholar_a40_task.json",
+    "interface": {
+      "candidate_filename": "1_allreduce_cuda.py",
+      "entrypoint": "solution(tensor: torch.Tensor) -> torch.Tensor",
+      "pkb_backend": "cuda"
+    },
+    "language": "python",
+    "source_path": "task.json",
+    "source_sha256": "48b4ae4152456e64179d54106c1a0f7e7068e78407aef37012739448acbc3821"
+  }
+}

@@ -200,3 +200,9 @@ The output directory contains the unchanged candidate, its `attempt.json`, the
 exact task and prompt, raw completion, and `generation_manifest.sha256`. Manas's
 evaluator can copy that directory as `solutions_andre_adapter` and run its
 correctness-first command without renaming the candidate.
+
+Scholar job `480810` completed this generation. The published package is
+[`results/pkb1-adapter-480810/`](results/pkb1-adapter-480810/), with candidate
+SHA-256 `45c57a796706255764bd120f804263353e79c7d9c9d380204276d437efb7c701`
+and attempt ID `69d2f9e944314603`. Evaluation fields remain `not_run` for the
+evaluator to fill.
